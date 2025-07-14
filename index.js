@@ -2,7 +2,7 @@ const express = require('express');
 const axios = require('axios');
 const app = express();
 
-const GOOGLE_API_KEY = 'AIzaSyCRSVZvsrl-W9tMG5fa7Mh_iAGByhIi6sU';
+const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
 
 app.get('/autocomplete', async (req, res) => {
   const input = req.query.input;
